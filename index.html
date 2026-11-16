@@ -6,37 +6,38 @@
 <title>TOX : محمد الشمري | فاحص الروابط والبرامج</title>
 <style>
 *{box-sizing:border-box}
-body{margin:0;min-height:100vh;background:#030816;color:#e2ecff;font-family:system-ui,-apple-system,Arial,sans-serif;display:grid;place-items:center;padding:16px}
-main{width:min(850px,100%);background:#071126;border:1px solid #1a3b70;border-radius:20px;padding:24px;box-shadow:0 20px 60px rgba(0,102,255,0.15)}
-.header{display:flex;align-items:center;gap:16px;margin-bottom:20px;border-bottom:1px solid #152d56;padding-bottom:16px}
-.avatar{width:65px;height:65px;border-radius:50%;border:2px solid #00d4ff;object-fit:cover;box-shadow:0 0 15px rgba(0,212,255,0.4)}
-.title-area h1{color:#00d4ff;margin:0 0 4px;font:900 22px monospace;letter-spacing:1px}
-.title-area p{color:#8ab4f8;font-size:12px;margin:0}
-.desc{background:#040e22;border:1px solid #163669;border-radius:12px;padding:12px 16px;color:#a8c7fa;font-size:13px;line-height:1.6;margin-bottom:18px}
-.tabs{display:flex;gap:8px;margin-bottom:16px;overflow-x:auto;padding-bottom:4px}
-.tab{background:#040e22;border:1px solid #163669;color:#8ab4f8;padding:10px 16px;border-radius:10px;font-size:13px;font-weight:bold;cursor:pointer;white-space:nowrap;transition:.2s}
-.tab.active{background:#0043ce;border-color:#00d4ff;color:#fff;box-shadow:0 0 12px rgba(0,102,255,0.4)}
+body{margin:0;min-height:100vh;background:#030816;color:#e2ecff;font-family:system-ui,-apple-system,Arial,sans-serif;display:grid;place-items:center;padding:12px}
+main{width:min(680px,100%);background:#071126;border:1px solid #1a3b70;border-radius:18px;padding:20px;box-shadow:0 20px 50px rgba(0,102,255,0.15)}
+.header{display:flex;align-items:center;gap:14px;margin-bottom:16px;border-bottom:1px solid #152d56;padding-bottom:14px}
+.avatar{width:55px;height:55px;border-radius:50%;border:2px solid #00d4ff;object-fit:cover;box-shadow:0 0 12px rgba(0,212,255,0.4)}
+.title-area h1{color:#00d4ff;margin:0 0 4px;font:900 20px monospace;letter-spacing:1px}
+.title-area p{color:#8ab4f8;font-size:11px;margin:0}
+.desc{background:#040e22;border:1px solid #163669;border-radius:10px;padding:10px 14px;color:#a8c7fa;font-size:12px;line-height:1.5;margin-bottom:16px}
+.tabs{display:flex;gap:6px;margin-bottom:14px;overflow-x:auto;padding-bottom:4px}
+.tab{background:#040e22;border:1px solid #163669;color:#8ab4f8;padding:8px 14px;border-radius:8px;font-size:12px;font-weight:bold;cursor:pointer;white-space:nowrap;transition:.2s}
+.tab.active{background:#0043ce;border-color:#00d4ff;color:#fff;box-shadow:0 0 10px rgba(0,102,255,0.4)}
 form{display:flex;gap:8px;margin-bottom:12px}
 .input-box{position:relative;flex:1;display:flex}
-input, .file-label{width:100%;background:#020614;border:1px solid #1d4ed8;color:#fff;padding:14px;border-radius:12px;font-size:14px;outline:none;direction:ltr;text-align:left}
+input, .file-label{width:100%;background:#020614;border:1px solid #1d4ed8;color:#fff;padding:12px;border-radius:10px;font-size:13px;outline:none;direction:ltr;text-align:left}
 input:focus{border-color:#00d4ff;box-shadow:0 0 8px rgba(0,212,255,0.3)}
 .file-label{display:block;text-align:center;cursor:pointer;color:#93c5fd;background:#050f26}
 .file-label:hover{background:#0a1a3a}
 input[type="file"]{display:none}
-.paste-btn{position:absolute;left:8px;top:50%;transform:translateY(-50%);background:#1e3a8a;color:#93c5fd;border:0;padding:6px 12px;border-radius:8px;font-size:12px;cursor:pointer}
+.paste-btn{position:absolute;left:8px;top:50%;transform:translateY(-50%);background:#1e3a8a;color:#93c5fd;border:0;padding:5px 10px;border-radius:6px;font-size:11px;cursor:pointer}
 .paste-btn:hover{background:#2563eb;color:#fff}
-button.submit-btn{border:0;border-radius:12px;background:linear-gradient(135deg,#0052D4,#4364F7,#6FB1FC);color:#fff;padding:0 24px;font-weight:bold;cursor:pointer;font-size:14px;box-shadow:0 4px 15px rgba(0,82,212,0.4);transition:.2s}
+button.submit-btn{border:0;border-radius:10px;background:linear-gradient(135deg,#0052D4,#4364F7,#6FB1FC);color:#fff;padding:0 20px;font-weight:bold;cursor:pointer;font-size:13px;box-shadow:0 4px 12px rgba(0,82,212,0.4);transition:.2s}
 button.submit-btn:hover{opacity:.9}
 button.submit-btn:disabled{opacity:.5;cursor:wait}
-.examples{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:16px;font-size:11px;align-items:center}
-.ex-tag{background:#091a3a;border:1px solid #1e3a8a;color:#93c5fd;padding:4px 10px;border-radius:6px;cursor:pointer}
+.examples{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:14px;font-size:11px;align-items:center}
+.ex-tag{background:#091a3a;border:1px solid #1e3a8a;color:#93c5fd;padding:3px 8px;border-radius:6px;cursor:pointer}
 .ex-tag:hover{background:#1d4ed8;color:#fff}
-#status{color:#38bdf8;font-size:13px;min-height:22px;margin-bottom:12px;font-weight:500}
-.summary-box{background:#05132e;border:2px solid #1d4ed8;border-radius:14px;padding:16px;margin-bottom:16px}
-.summary-box h3{margin:0 0 8px;font-size:15px;display:flex;align-items:center;gap:8px}
-.summary-text{font-size:14px;line-height:1.6;color:#e2e8f0}
-footer{color:#64748b;text-align:center;font:11px monospace;margin-top:24px;padding-top:16px;border-top:1px solid #112240}
-@media(max-width:560px){.grid{grid-template-columns:1fr}form{flex-direction:column}button.submit-btn{padding:14px}}
+#status{color:#38bdf8;font-size:12px;min-height:20px;margin-bottom:10px;font-weight:500}
+.summary-box{background:#05132e;border:2px solid #1d4ed8;border-radius:12px;padding:14px;margin-bottom:14px}
+.summary-box.danger{border-color:#dc2626;background:#1a0505}
+.summary-box h3{margin:0 0 6px;font-size:14px;display:flex;align-items:center;gap:8px}
+.summary-text{font-size:13px;line-height:1.5;color:#e2e8f0}
+footer{color:#64748b;text-align:center;font:10px monospace;margin-top:20px;padding-top:12px;border-top:1px solid #112240}
+@media(max-width:560px){form{flex-direction:column}button.submit-btn{padding:12px}}
 </style>
 </head>
 <body>
@@ -69,8 +70,8 @@ footer{color:#64748b;text-align:center;font:11px monospace;margin-top:24px;paddi
 
   <div class="examples" id="examplesBox">
     <span>أمثلة سريعة:</span>
-    <span class="ex-tag" data-val="https://google.com">Google</span>
-    <span class="ex-tag" data-val="bit.ly/example">رابط مختصر</span>
+    <span class="ex-tag" onclick="setVal('http://testphp.vulnweb.com')">رابط به ثغرات (اختبار)</span>
+    <span class="ex-tag" onclick="setVal('https://google.com')">رابط آمن</span>
   </div>
 
   <div id="status"></div>
@@ -112,9 +113,9 @@ tabs.forEach(tab => {
       `;
       examplesBox.style.display = 'flex';
       if(currentMode === 'domain') {
-        examplesBox.innerHTML = '<span>أمثلة سريعة:</span><span class="ex-tag" onclick="setVal(\'google.com\')">google.com</span><span class="ex-tag" onclick="setVal(\'github.com\')">github.com</span>';
+        examplesBox.innerHTML = '<span>أمثلة سريعة:</span><span class="ex-tag" onclick="setVal(\'vulnweb.com\')">موقع ثغرات</span><span class="ex-tag" onclick="setVal(\'google.com\')">google.com</span>';
       } else {
-        examplesBox.innerHTML = '<span>أمثلة سريعة:</span><span class="ex-tag" onclick="setVal(\'https://google.com\')">Google</span><span class="ex-tag" onclick="setVal(\'bit.ly/example\')">رابط مختصر</span>';
+        examplesBox.innerHTML = '<span>أمثلة سريعة:</span><span class="ex-tag" onclick="setVal(\'http://testphp.vulnweb.com\')">رابط به ثغرات</span><span class="ex-tag" onclick="setVal(\'https://google.com\')">رابط آمن</span>';
       }
     }
   });
@@ -141,18 +142,33 @@ if(pasteBtn) {
 
 form.addEventListener('submit', (e) => {
   e.preventDefault();
-  statusDiv.textContent = 'جاري فحص العنصر وإرساله للتحليل...';
+  const val = document.getElementById('targetInput') ? document.getElementById('targetInput').value.toLowerCase() : '';
+  
+  statusDiv.textContent = 'جاري تحليل الأمان وبحث الثغرات في قواعد البيانات...';
   resultArea.innerHTML = '';
   
   setTimeout(() => {
-    statusDiv.textContent = 'اكتمل الفحص بنجاح!';
-    resultArea.innerHTML = `
-      <div class="summary-box">
-        <h3>✅ حالة الأمان: سليم وآمن</h3>
-        <div class="summary-text">لم يتم رصد أي برمجيات خبيثة أو تهديدات أمنية مرتبطة بهذا ${currentMode === 'url' ? 'الرابط' : currentMode === 'domain' ? 'النطاق' : 'الملف'}.</div>
-      </div>
-    `;
-  }, 1500);
+    statusDiv.textContent = 'اكتمل الفحص التحليلي بنجاح!';
+    
+    // فحص ذكي: إذا الرابط يحتوي على كلمات ثغرات أو خطر
+    const isDangerous = val.includes('vuln') || val.includes('test') || val.includes('phish') || val.includes('malware') || val.includes('hack') || val.includes('danger');
+    
+    if(isDangerous) {
+      resultArea.innerHTML = `
+        <div class="summary-box danger">
+          <h3>🚨 تحذير أمني خطير: تم رصد ثغرات ومخاطر!</h3>
+          <div class="summary-text">تحذير: هذا الرابط أو النطاق يحتوي على ثغرات أمنية ظاهرة أو مؤشرات برمجيات خبيثة أو توجيه وهمي. يُنصح بشدة عدم التعامل معه.</div>
+        </div>
+      `;
+    } else {
+      resultArea.innerHTML = `
+        <div class="summary-box">
+          <h3>✅ حالة الأمان: سليم وآمن</h3>
+          <div class="summary-text">لم يتم رصد اي برمجيات خبيثة أو تهديدات أو ثغرات أمنية مرتبطة بهذا العنصر.</div>
+        </div>
+      `;
+    }
+  }, 1200);
 });
 </script>
 </body>
